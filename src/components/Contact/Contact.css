@@ -1,0 +1,220 @@
+.contact{
+    width: 89%;
+    margin: 70px auto 0;
+    box-sizing: border-box;
+}   
+
+.main{
+    margin-bottom: 50px;
+}
+
+.contact-header{
+    margin-bottom: 30px;
+}
+
+.contact-header h1{
+    font-size: 36px;
+    line-height: 59px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #101828;
+}
+
+.contact-header p{
+    color: #475467;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.form-container .form .form-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.form-container .email-area{
+    margin-bottom: 30px;
+}
+
+.form-container .form label{
+    color: #344054;
+    font-weight: 500;
+    font-size: 15.5px;
+    line-height: 20px;
+}
+
+.form-container input{
+    border: none;
+    outline: none;
+    border: 1px solid #D0D5DD;
+    border-radius: 7px;
+    margin-top: 10px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    background-color: white;
+    padding: 15px 0 15px 14px;
+    font-size: 15px;
+    width: 100%;
+}
+
+input:focus,
+textarea:focus{
+    border: 2px solid #84CAFF;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF;
+}
+
+.form-container textarea{
+    border: none;
+    outline: none;
+    width: 100%;
+    border: 1px solid #D0D5DD;
+    border-radius: 7px;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 12px 14px;
+    padding: 15px 0 15px 14px;
+    margin-top: 10px;
+}
+
+::placeholder{
+    color: #667085;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-container .agree{
+    display: grid;
+    align-items:flex-start;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'check label';
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.form-container .check{
+    grid-area: check;
+    margin-top: 2px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-color: red;
+    cursor: pointer;
+}
+
+input::selection{
+   background-color: red;
+}
+
+.form-container .form .label{
+    grid-area: label;
+    font-weight: lighter;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin: 20px 0;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 1px solid #D0D5DD;
+  border-radius: 6px;
+}
+
+
+.container input:checked ~ .checkmark {
+  background-color: transparent;
+  border: 2px solid #84CAFF;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #D1E9FF;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 8px;
+  top: 2px;
+  width: 7px;
+  height: 14px;
+  border: solid #1570EF;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form-container .submit-btn{
+    background-color: #1570EF;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.submit-btn:hover{
+    background-color: #175CD3;
+}
+
+@media only screen and (min-width: 768px){
+    .contact-header p{
+        line-height: 38px;
+    }
+
+    .form-container .message-area{
+        margin-top: 30px;
+    }
+
+    .form-container .form .form-content{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        column-gap: 50px;
+        grid-area: '';
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .contact{
+        width: 1280px;
+    }
+}
